@@ -8,8 +8,6 @@ use App\Framework\Renderer\Interfaces\RenderingEngineInterface;
 use App\Framework\Session\Facade\Session;
 use eftec\bladeone\BladeOne;
 
-use function App\Framework\Console\Provider\app;
-
 class ConsoleProvider extends Provider
 {
 

@@ -7,8 +7,6 @@ use App\Framework\Renderer\Interfaces\RendererInterface;
 use App\Framework\Session\Facade\Session;
 use eftec\bladeone\BladeOne;
 
-use function App\Framework\Auth\Providers\app;
-
 class AuthProvider extends Provider
 {
 

@@ -6,8 +6,6 @@ use App\Framework\Console\Commands\Command;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Helper\Table;
 
-use function App\Framework\Console\Commands\app;
-
 #[AsCommand(
     name: 'route:list',
     description: 'Show all configured routes',

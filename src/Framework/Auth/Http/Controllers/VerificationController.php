@@ -7,8 +7,6 @@ use App\Framework\Session\Facade\Session;
 use App\Http\Controller\Controller;
 use App\Framework\Auth\Guard;
 
-use function App\Framework\Auth\Http\Controllers\app;
-
 class VerificationController extends Controller
 {
     /**

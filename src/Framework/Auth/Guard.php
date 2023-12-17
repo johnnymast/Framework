@@ -7,7 +7,6 @@ use App\Framework\Session\Facade\Session;
 use Doctrine\ORM\EntityManager;
 use App\Model\User;
 
-use function App\Framework\Auth\app;
 
 final class Guard
 {

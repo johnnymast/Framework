@@ -9,8 +9,6 @@ use Psr\Http\Server\RequestHandlerInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Server\MiddlewareInterface;
 
-use function App\Framework\Csrf\Http\Middleware\app;
-
 class CSRFMiddleware implements MiddlewareInterface
 {
 

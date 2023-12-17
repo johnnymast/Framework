@@ -7,7 +7,6 @@ use App\Framework\Bootstrap\Modules\ConsoleModule;
 use App\Framework\Bootstrap\Modules\DatabaseModule;
 use App\Framework\Bootstrap\Modules\DotEnvModule;
 use App\Framework\Bootstrap\Modules\FacadeModule;
-use App\Framework\Bootstrap\Modules\HelpersModule;
 use App\Framework\Bootstrap\Modules\MonologModule;
 use App\Framework\Bootstrap\Modules\ProvidersModule;
 use App\Framework\Bootstrap\Modules\RendererModule;
@@ -47,7 +46,6 @@ class ConsoleKernel extends Kernel
      */
     protected array $defaults = [
         'modules' => [
-            HelpersModule::class,
             DotEnvModule::class,
             FacadeModule::class,
             MonologModule::class,

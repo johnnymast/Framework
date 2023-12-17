@@ -10,8 +10,6 @@ use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 
-use function App\Framework\Auth\Http\Middleware\app;
-
 class AuthRequiredMiddleware implements MiddlewareInterface
 {
     protected string $redirectTo = 'loggedout';

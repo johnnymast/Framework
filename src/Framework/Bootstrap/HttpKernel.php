@@ -4,7 +4,6 @@ namespace App\Framework\Bootstrap;
 
 use App\Framework\Application;
 use App\Framework\Auth\Http\Middleware\AuthMiddleware;
-use App\Framework\Bootstrap\Kernel;
 use App\Framework\Bootstrap\Modules\CSRFModule;
 use App\Framework\Bootstrap\Modules\DatabaseModule;
 use App\Framework\Bootstrap\Modules\DotEnvModule;
@@ -13,8 +12,8 @@ use App\Framework\Bootstrap\Modules\ModelRouteBinding;
 use App\Framework\Bootstrap\Modules\MonologModule;
 use App\Framework\Bootstrap\Modules\ProvidersModule;
 use App\Framework\Bootstrap\Modules\RendererModule;
-use App\Http\Middleware\GlobalRequestMiddleware;
-use App\Http\Middleware\HttpErrorMiddleware;
+use App\Framework\Global\Http\Middleware\GlobalRequestMiddleware;
+use App\Framework\Global\Http\Middleware\HttpErrorMiddleware;
 
 
 class HttpKernel extends Kernel
@@ -77,7 +76,7 @@ class HttpKernel extends Kernel
     /**
      * Register middleware to the Application.
      *
-     * @return \App\Application
+     * @return \App\Framework\Application
      */
     public function registerMiddleware(): Application
     {
@@ -95,7 +94,7 @@ class HttpKernel extends Kernel
     /**
      * Register middleware to the Application.
      *
-     * @return \App\Application
+     * @return \App\Framework\Application
      */
     public function registerErrorMiddleware(): Application
     {

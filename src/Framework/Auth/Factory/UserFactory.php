@@ -7,8 +7,6 @@ use App\Framework\Facade\Email;
 use App\Model\User;
 use Doctrine\ORM\EntityManager;
 
-use function App\Framework\Auth\Factory\app;
-
 final class UserFactory
 {
     /**
