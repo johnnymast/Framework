@@ -2,6 +2,7 @@
   "name": "johnnymast/framework",
   "description": "My personal framework",
   "minimum-stability": "stable",
+  "type": "library",
   "license": "MIT",
   "keywords": [
   ],
