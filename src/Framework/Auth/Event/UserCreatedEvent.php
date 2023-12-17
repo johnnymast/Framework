@@ -1,6 +1,6 @@
 <?php
 
-namespace App\src\Framework\Auth\Event;
+namespace App\Framework\Auth\Event;
 
 use App\Model\User;
 

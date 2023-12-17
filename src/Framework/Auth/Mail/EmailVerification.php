@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\src\Framework\Auth\Mail;
+namespace App\Framework\Auth\Mail;
 
-use App\src\Framework\Mail\Mailable\Mailable;
+use App\Framework\Mail\Mailable\Mailable;
 use App\Model\User;
 
 class EmailVerification extends Mailable

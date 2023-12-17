@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-namespace App\src\Framework\Events\Providers;
+namespace App\Framework\Events\Providers;
 
 use Closure;
 use InvalidArgumentException;

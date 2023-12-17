@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Tests\Unit\Framework\Validation\Types;
+namespace App\tests\Unit\Validation\Types;
 
 use App\Framework\Validation\Attributes\ValidationRule;
 use App\Framework\Validation\ValidationContext;

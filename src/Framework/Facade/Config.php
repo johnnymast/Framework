@@ -1,8 +1,8 @@
 <?php
 
-namespace App\src\Framework\Facade;
+namespace App\Framework\Facade;
 
-use App\src\Framework\Facade;
+use App\Framework\Facade;
 
 /**
  * @method static mixed load(string $key = '')

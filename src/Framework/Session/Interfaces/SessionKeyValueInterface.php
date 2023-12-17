@@ -1,6 +1,6 @@
 <?php
 
-namespace App\src\Framework\Session\Interfaces;
+namespace App\Framework\Session\Interfaces;
 
 interface SessionKeyValueInterface
 {

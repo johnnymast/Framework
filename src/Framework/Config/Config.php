@@ -1,9 +1,9 @@
 <?php
 
-namespace App\src\Framework\Config;
+namespace App\Framework\Config;
 
-use App\src\Framework\Config\ConfigFile;
-use App\src\Framework\Config\IterableArray;
+use App\Framework\Config\ConfigFile;
+use App\Framework\Config\IterableArray;
 
 class Config extends IterableArray
 {
@@ -12,7 +12,7 @@ class Config extends IterableArray
      *
      * @param array<string> $parts parts of the given key.
      *
-     * @return \App\src\Framework\Config\ConfigFile
+     * @return \App\Framework\Config\ConfigFile
      */
     private function resolveFile(array $parts = []): ConfigFile
     {

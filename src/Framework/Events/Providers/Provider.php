@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace App\src\Framework\Events\Providers;
+namespace App\Framework\Events\Providers;
 
-use App\src\Framework\Events\Providers\ListenerCollection;
-use App\src\Framework\Interfaces\Events\ListenerProviderInterface;
+use App\Framework\Events\Providers\ListenerCollection;
+use App\Framework\Interfaces\Events\ListenerProviderInterface;
 
 /**
  * The Listener Provider provide listeners to the EventDispatcher.
@@ -17,7 +17,7 @@ class Provider implements ListenerProviderInterface
     protected ?ListenerCollection $listeners = null;
 
     /**
-     * @param \App\src\Framework\Events\Providers\ListenerCollection $listeners
+     * @param \App\Framework\Events\Providers\ListenerCollection $listeners
      */
     public function __construct(ListenerCollection $listeners)
     {

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\src\Framework\Interfaces\Events;
+namespace App\Framework\Interfaces\Events;
 
 /**
  * An Event whose processing may be interrupted when the event has been handled.

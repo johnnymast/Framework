@@ -1,9 +1,9 @@
 <?php
 
-namespace App\src\Framework\Csrf\Http\Middleware;
+namespace App\Framework\Csrf\Http\Middleware;
 
-use App\src\Framework\Exceptions\Csrf\ExpiredCSRFToken;
-use App\src\Framework\Exceptions\Csrf\InvalidCSRFToken;
+use App\Framework\Exceptions\Csrf\ExpiredCSRFToken;
+use App\Framework\Exceptions\Csrf\InvalidCSRFToken;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -28,7 +28,7 @@ class CSRFMiddleware implements MiddlewareInterface
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
         /**
-         * @var \App\src\Framework\Csrf\CsrfProtection $csrf
+         * @var \App\Framework\Csrf\CsrfProtection $csrf
          */
         $csrf = app()->resolve('csrf');
         $params = $request->getParsedBody();

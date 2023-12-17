@@ -1,10 +1,10 @@
 <?php
 
-namespace App\src\Framework\Csrf;
+namespace App\Framework\Csrf;
 
-use App\src\Framework\Exceptions\Csrf\ExpiredCSRFToken;
-use App\src\Framework\Exceptions\Csrf\InvalidCSRFToken;
-use App\src\Framework\Session\Facade\Session;
+use App\Framework\Exceptions\Csrf\ExpiredCSRFToken;
+use App\Framework\Exceptions\Csrf\InvalidCSRFToken;
+use App\Framework\Session\Facade\Session;
 
 class CsrfProtection
 {
@@ -66,8 +66,8 @@ class CsrfProtection
      *
      * @param string $token the token strong.
      *
-     * @throws \App\src\Framework\Exceptions\Csrf\ExpiredCSRFToken
-     * @throws \App\src\Framework\Exceptions\Csrf\InvalidCSRFToken
+     * @throws \App\Framework\Exceptions\Csrf\ExpiredCSRFToken
+     * @throws \App\Framework\Exceptions\Csrf\InvalidCSRFToken
      * @return bool
      */
     public function validateToken(string $token = ''): bool

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\src\Framework\Auth\Http\Middleware;
+namespace App\Framework\Auth\Http\Middleware;
 
-use App\src\Framework\Session\Facade\Session;
+use App\Framework\Session\Facade\Session;
 use App\Model\User;
 use Doctrine\ORM\EntityManager;
 use Psr\Http\Message\ResponseInterface;

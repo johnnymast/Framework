@@ -1,6 +1,6 @@
 <?php
 
-namespace App\src\Framework\Auth\Interfaces;
+namespace App\Framework\Auth\Interfaces;
 
 interface UserEntity
 {

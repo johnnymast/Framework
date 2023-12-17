@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace App\Tests\Unit\Framework\Events\Events;
+namespace App\Framework\tests\Unit\Events\Events;
 
 /**
  * Test even for running basic tests.

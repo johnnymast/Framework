@@ -1,6 +1,6 @@
 <?php
 
-namespace App\src\Framework;
+namespace App\Framework;
 
 use Doctrine\ORM\EntityManager;
 use Psr\Http\Message\ResponseFactoryInterface;

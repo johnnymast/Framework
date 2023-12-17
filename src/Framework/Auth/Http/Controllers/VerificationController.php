@@ -1,11 +1,11 @@
 <?php
 
-namespace App\src\Framework\Auth\Http\Controllers;
+namespace App\Framework\Auth\Http\Controllers;
 
 use Psr\Http\Message\ResponseInterface as Response;
-use App\src\Framework\Session\Facade\Session;
+use App\Framework\Session\Facade\Session;
 use App\Http\Controller\Controller;
-use App\src\Framework\Auth\Guard;
+use App\Framework\Auth\Guard;
 
 use function App\Framework\Auth\Http\Controllers\app;
 
@@ -41,7 +41,7 @@ class VerificationController extends Controller
         $settings = config('auth.user');
 
         /**
-         * @var \App\src\Framework\Auth\Repository\UserRepository $repository
+         * @var \App\Framework\Auth\Repository\UserRepository $repository
          */
         $repository = $this->em->getRepository($settings['entity']);
         $user = $repository->findOneBy(['verification_token' => $args['token'] ?? '']);

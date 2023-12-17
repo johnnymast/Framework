@@ -1,6 +1,6 @@
 <?php
 
-namespace App\src\Framework\Renderer\Interfaces;
+namespace App\Framework\Renderer\Interfaces;
 
 interface RenderingEngineInterface
 {

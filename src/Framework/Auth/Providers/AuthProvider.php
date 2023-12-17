@@ -1,10 +1,10 @@
 <?php
 
-namespace App\src\Framework\Auth\Providers;
+namespace App\Framework\Auth\Providers;
 
-use App\src\Framework\Provider;
-use App\src\Framework\Renderer\Interfaces\RendererInterface;
-use App\src\Framework\Session\Facade\Session;
+use App\Framework\Provider;
+use App\Framework\Renderer\Interfaces\RendererInterface;
+use App\Framework\Session\Facade\Session;
 use eftec\bladeone\BladeOne;
 
 use function App\Framework\Auth\Providers\app;
@@ -24,7 +24,7 @@ class AuthProvider extends Provider
         $renderer = $this->app->resolve(RendererInterface::class);
 
         /**
-         * @var  \App\src\Framework\Renderer\Interfaces\RenderingEngineInterface $engine ;
+         * @var  \App\Framework\Renderer\Interfaces\RenderingEngineInterface $engine ;
          */
         $engine = $renderer->getRenderingEngine();
         $engine->addViewPath(realpath(__DIR__ . '/../views'));

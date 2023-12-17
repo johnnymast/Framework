@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Tests\Unit\Framework\Session;
+namespace App\Framework\Tests\Unit\Framework\Session;
 
 use App\Framework\Session\Session;
 

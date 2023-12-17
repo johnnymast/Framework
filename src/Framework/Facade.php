@@ -1,9 +1,9 @@
 <?php
 
-namespace App\src\Framework;
+namespace App\Framework;
 
 use App\Application;
-use App\src\Framework\Config\Config;
+use App\Framework\Config\Config;
 
 abstract class Facade
 {

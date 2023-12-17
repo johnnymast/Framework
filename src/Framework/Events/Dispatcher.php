@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
-namespace App\src\Framework\Events;
+namespace App\Framework\Events;
 
-use App\src\Framework\Interfaces\Events\EventDispatcherInterface;
-use App\src\Framework\Interfaces\Events\StoppableEventInterface;
-use App\src\Framework\Interfaces\Events\ListenerProviderInterface;
+use App\Framework\Interfaces\Events\EventDispatcherInterface;
+use App\Framework\Interfaces\Events\StoppableEventInterface;
+use App\Framework\Interfaces\Events\ListenerProviderInterface;
 
 /**
  * A Dispatcher is a service object implementing EventDispatcherInterface.
@@ -23,7 +23,7 @@ class Dispatcher implements EventDispatcherInterface
     /**
      * EventDispatcher constructor.
      *
-     * @param \App\src\Framework\Interfaces\Events\ListenerProviderInterface $provider
+     * @param \App\Framework\Interfaces\Events\ListenerProviderInterface $provider
      */
     public function __construct(ListenerProviderInterface $provider)
     {

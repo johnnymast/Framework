@@ -1,13 +1,13 @@
 <?php
 
-namespace App\src\Framework\Auth\Http\Controllers;
+namespace App\Framework\Auth\Http\Controllers;
 
-use App\src\Framework\Auth\Factory\UserFactory;
-use App\src\Framework\Auth\Mail\PasswordReset;
-use App\src\Framework\Facade\Email;
-use App\src\Framework\Session\Facade\Session;
-use App\src\Framework\Validation\Exceptions\ValidationDefinitionException;
-use App\src\Framework\Validation\Validator;
+use App\Framework\Auth\Factory\UserFactory;
+use App\Framework\Auth\Mail\PasswordReset;
+use App\Framework\Facade\Email;
+use App\Framework\Session\Facade\Session;
+use App\Framework\Validation\Exceptions\ValidationDefinitionException;
+use App\Framework\Validation\Validator;
 use App\Http\Controller\Controller;
 use Doctrine\ORM\EntityManager;
 use PHPMailer\PHPMailer\Exception;

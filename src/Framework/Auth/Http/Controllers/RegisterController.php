@@ -1,16 +1,16 @@
 <?php
 
-namespace App\src\Framework\Auth\Http\Controllers;
+namespace App\Framework\Auth\Http\Controllers;
 
-use App\src\Framework\Auth\Event\UserCreatedEvent;
-use App\src\Framework\Auth\Exceptions\AuthRegisterException;
-use App\src\Framework\Auth\Factory\UserFactory;
-use App\src\Framework\Auth\Interfaces\RegisterUserInterface;
-use App\src\Framework\Events\Dispatcher;
-use App\src\Framework\Events\Providers\Provider;
-use App\src\Framework\Session\Facade\Session;
-use App\src\Framework\Validation\Exceptions\ValidationDefinitionException;
-use App\src\Framework\Validation\Validator;
+use App\Framework\Auth\Event\UserCreatedEvent;
+use App\Framework\Auth\Exceptions\AuthRegisterException;
+use App\Framework\Auth\Factory\UserFactory;
+use App\Framework\Auth\Interfaces\RegisterUserInterface;
+use App\Framework\Events\Dispatcher;
+use App\Framework\Events\Providers\Provider;
+use App\Framework\Session\Facade\Session;
+use App\Framework\Validation\Exceptions\ValidationDefinitionException;
+use App\Framework\Validation\Validator;
 use App\Http\Controller\Controller;
 use App\Model\User;
 use Doctrine\ORM\EntityManager;

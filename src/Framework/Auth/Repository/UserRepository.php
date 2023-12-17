@@ -1,6 +1,6 @@
 <?php
 
-namespace App\src\Framework\Auth\Repository;
+namespace App\Framework\Auth\Repository;
 
 use Doctrine\ORM\EntityRepository;
 

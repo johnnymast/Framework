@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\src\Framework\Validation;
+namespace App\Framework\Validation;
 
-use App\src\Framework\Validation\Attributes\ValidationRule;
-use App\src\Framework\Validation\ValidationContext;
+use App\Framework\Validation\Attributes\ValidationRule;
+use App\Framework\Validation\ValidationContext;
 
 class TypeResolver
 {

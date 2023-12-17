@@ -1,8 +1,8 @@
 <?php
 
-namespace App\src\Framework\Renderer\Renderers;
+namespace App\Framework\Renderer\Renderers;
 
-use App\src\Framework\Renderer\Interfaces\RenderingEngineInterface;
+use App\Framework\Renderer\Interfaces\RenderingEngineInterface;
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
 use Twig\TwigFilter;

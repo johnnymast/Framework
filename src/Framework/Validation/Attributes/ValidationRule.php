@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\src\Framework\Validation\Attributes;
+namespace App\Framework\Validation\Attributes;
 
 use Attribute;
 

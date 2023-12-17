@@ -1,6 +1,6 @@
 <?php
 
-namespace App\src\Framework\Bootstrap;
+namespace App\Framework\Bootstrap;
 
 class MiddlewareDispatcher extends \Slim\MiddlewareDispatcher
 {

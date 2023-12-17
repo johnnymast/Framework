@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace App\src\Framework\Validation;
+namespace App\Framework\Validation;
 
-use App\src\Framework\Validation\Exceptions\ValidationDefinitionException;
-use App\src\Framework\Validation\TypeResolver;
-use App\src\Framework\Validation\ValidationTypes\TypeDefinitions;
-use App\src\Framework\Validation\ValidationContext;
+use App\Framework\Validation\Exceptions\ValidationDefinitionException;
+use App\Framework\Validation\TypeResolver;
+use App\Framework\Validation\ValidationTypes\TypeDefinitions;
+use App\Framework\Validation\ValidationContext;
 
 class Validator
 {

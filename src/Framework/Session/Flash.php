@@ -1,9 +1,9 @@
 <?php
 
-namespace App\src\Framework\Session;
+namespace App\Framework\Session;
 
-use App\src\Framework\Session\Interfaces\SessionKeyValueInterface;
-use App\src\Framework\Session\Session;
+use App\Framework\Session\Interfaces\SessionKeyValueInterface;
+use App\Framework\Session\Session;
 
 final class Flash implements SessionKeyValueInterface
 {
@@ -11,7 +11,7 @@ final class Flash implements SessionKeyValueInterface
     /**
      * Flash constructor.
      *
-     * @param \App\src\Framework\Session\Session $session
+     * @param \App\Framework\Session\Session $session
      * @param string                             $storageKey
      */
     public function __construct(protected Session $session, protected string $storageKey = '_flash')

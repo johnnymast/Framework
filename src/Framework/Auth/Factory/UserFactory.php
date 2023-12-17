@@ -1,9 +1,9 @@
 <?php
 
-namespace App\src\Framework\Auth\Factory;
+namespace App\Framework\Auth\Factory;
 
-use App\src\Framework\Auth\Mail\EmailVerification;
-use App\src\Framework\Facade\Email;
+use App\Framework\Auth\Mail\EmailVerification;
+use App\Framework\Facade\Email;
 use App\Model\User;
 use Doctrine\ORM\EntityManager;
 

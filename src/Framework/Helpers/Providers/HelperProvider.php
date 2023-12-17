@@ -1,8 +1,8 @@
 <?php
 
-namespace App\src\Framework\Helpers\Providers;
+namespace App\Framework\Helpers\Providers;
 
-use App\src\Framework\Provider;
+use App\Framework\Provider;
 
 class HelperProvider extends Provider
 {

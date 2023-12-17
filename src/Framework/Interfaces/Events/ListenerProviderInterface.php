@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\src\Framework\Interfaces\Events;
+namespace App\Framework\Interfaces\Events;
 
 /**
  * Mapper from an event to the listeners that are applicable to that event.

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\src\Framework\Auth\Exceptions;
+namespace App\Framework\Auth\Exceptions;
 
 class AuthRegisterException extends \Exception
 {

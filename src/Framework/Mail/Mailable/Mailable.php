@@ -1,6 +1,6 @@
 <?php
 
-namespace App\src\Framework\Mail\Mailable;
+namespace App\Framework\Mail\Mailable;
 
 abstract class Mailable
 {

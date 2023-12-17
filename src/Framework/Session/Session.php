@@ -1,10 +1,10 @@
 <?php
 
-namespace App\src\Framework\Session;
+namespace App\Framework\Session;
 
-use App\src\Framework\Session\Exception\SessionException;
-use App\src\Framework\Session\Flash;
-use App\src\Framework\Session\Interfaces\SessionInterface;
+use App\Framework\Session\Exception\SessionException;
+use App\Framework\Session\Flash;
+use App\Framework\Session\Interfaces\SessionInterface;
 
 class Session implements SessionInterface
 {
@@ -39,7 +39,7 @@ class Session implements SessionInterface
      *
      * @param array<string> $options The options for the session.
      *
-     * @throws \App\src\Framework\Session\Exception\SessionException
+     * @throws \App\Framework\Session\Exception\SessionException
      */
     public function __construct(array $options = [])
     {
@@ -73,7 +73,7 @@ class Session implements SessionInterface
     /**
      * Start the session.
      *
-     * @throws \App\src\Framework\Session\Exception\SessionException
+     * @throws \App\Framework\Session\Exception\SessionException
      * @return void
      */
     public function start(): void
@@ -226,7 +226,7 @@ class Session implements SessionInterface
     /**
      * Return the flash messages.
      *
-     * @return \App\src\Framework\Session\Flash
+     * @return \App\Framework\Session\Flash
      */
     public function getFlash(): Flash
     {

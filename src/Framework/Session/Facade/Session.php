@@ -1,12 +1,12 @@
 <?php
 
-namespace App\src\Framework\Session\Facade;
+namespace App\Framework\Session\Facade;
 
-use App\src\Framework\Facade;
+use App\Framework\Facade;
 
 /**
- * @method static \App\src\Framework\Session\Session getInstance()
- * @method static \App\src\Framework\Session\Flash getFlash()
+ * @method static \App\Framework\Session\Session getInstance()
+ * @method static \App\Framework\Session\Flash getFlash()
  * @method static void start()
  * @method static void isStarted()
  * @method static void getId()

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\src\Framework\Console\Commands;
+namespace App\Framework\Console\Commands;
 
-use App\src\Framework\Console\Commands\Command;
+use App\Framework\Console\Commands\Command;
 use ReflectionClass;
 use ReflectionMethod;
 use Symfony\Component\Console\Attribute\AsCommand;

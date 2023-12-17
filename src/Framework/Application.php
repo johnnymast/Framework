@@ -1,6 +1,6 @@
 <?php
 
-namespace App\src\Framework;
+namespace App\Framework;
 
 use Psr\Http\Message\RequestInterface;
 use Slim\App;

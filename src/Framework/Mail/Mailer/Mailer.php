@@ -1,9 +1,9 @@
 <?php
 
-namespace App\src\Framework\Mail\Mailer;
+namespace App\Framework\Mail\Mailer;
 
-use App\src\Framework\Config\Config;
-use App\src\Framework\Mail\Mailable\Mailable;
+use App\Framework\Config\Config;
+use App\Framework\Mail\Mailable\Mailable;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 

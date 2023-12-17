@@ -1,25 +1,25 @@
 <?php
 
-namespace App\src\Framework\Bootstrap;
+namespace App\Framework\Bootstrap;
 
-use App\src\Framework\Bootstrap\Kernel;
-use App\src\Framework\Bootstrap\Modules\ConsoleModule;
-use App\src\Framework\Bootstrap\Modules\DatabaseModule;
-use App\src\Framework\Bootstrap\Modules\DotEnvModule;
-use App\src\Framework\Bootstrap\Modules\FacadeModule;
-use App\src\Framework\Bootstrap\Modules\HelpersModule;
-use App\src\Framework\Bootstrap\Modules\MonologModule;
-use App\src\Framework\Bootstrap\Modules\ProvidersModule;
-use App\src\Framework\Bootstrap\Modules\RendererModule;
-use App\src\Framework\Bootstrap\Modules\SymfonyCommandModule;
-use App\src\Framework\Console\Commands\FacadeMethodBlockGeneratorCommand;
-use App\src\Framework\Console\Commands\MakeCommandCommand;
-use App\src\Framework\Console\Commands\MakeControllerCommand;
-use App\src\Framework\Console\Commands\MakeMailableCommand;
-use App\src\Framework\Console\Commands\MakeMiddlewareCommand;
-use App\src\Framework\Console\Commands\MakeModelCommand;
-use App\src\Framework\Console\Commands\MakeProviderCommand;
-use App\src\Framework\Console\Commands\RouteListCommand;
+use App\Framework\Bootstrap\Kernel;
+use App\Framework\Bootstrap\Modules\ConsoleModule;
+use App\Framework\Bootstrap\Modules\DatabaseModule;
+use App\Framework\Bootstrap\Modules\DotEnvModule;
+use App\Framework\Bootstrap\Modules\FacadeModule;
+use App\Framework\Bootstrap\Modules\HelpersModule;
+use App\Framework\Bootstrap\Modules\MonologModule;
+use App\Framework\Bootstrap\Modules\ProvidersModule;
+use App\Framework\Bootstrap\Modules\RendererModule;
+use App\Framework\Bootstrap\Modules\SymfonyCommandModule;
+use App\Framework\Console\Commands\FacadeMethodBlockGeneratorCommand;
+use App\Framework\Console\Commands\MakeCommandCommand;
+use App\Framework\Console\Commands\MakeControllerCommand;
+use App\Framework\Console\Commands\MakeMailableCommand;
+use App\Framework\Console\Commands\MakeMiddlewareCommand;
+use App\Framework\Console\Commands\MakeModelCommand;
+use App\Framework\Console\Commands\MakeProviderCommand;
+use App\Framework\Console\Commands\RouteListCommand;
 
 class ConsoleKernel extends Kernel
 {

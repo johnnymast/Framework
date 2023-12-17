@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\src\Framework\Interfaces\Events;
+namespace App\Framework\Interfaces\Events;
 
 /**
  * Defines a dispatcher for events.

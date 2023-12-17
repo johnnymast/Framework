@@ -1,11 +1,11 @@
 <?php
 
-namespace App\src\Framework\Renderer;
+namespace App\Framework\Renderer;
 
-use App\src\Framework\Renderer\Interfaces\RendererInterface;
-use App\src\Framework\Renderer\Interfaces\RenderingEngineInterface;
-use App\src\Framework\Renderer\View;
-use App\src\Framework\Session\Facade\Session;
+use App\Framework\Renderer\Interfaces\RendererInterface;
+use App\Framework\Renderer\Interfaces\RenderingEngineInterface;
+use App\Framework\Renderer\View;
+use App\Framework\Session\Facade\Session;
 use Psr\Http\Message\ResponseInterface;
 
 final class TemplateRenderer implements RendererInterface
@@ -27,7 +27,7 @@ final class TemplateRenderer implements RendererInterface
     /**
      * Return the configured rendering Engine.
      *
-     * @return \App\src\Framework\Renderer\Interfaces\RenderingEngineInterface
+     * @return \App\Framework\Renderer\Interfaces\RenderingEngineInterface
      */
     public function getRenderingEngine(): RenderingEngineInterface
     {
@@ -60,7 +60,7 @@ final class TemplateRenderer implements RendererInterface
     /**
      * Tell the renderer to render a view Object.
      *
-     * @param \App\src\Framework\Renderer\View $view
+     * @param \App\Framework\Renderer\View $view
      *
      * @return \Psr\Http\Message\ResponseInterface
      */

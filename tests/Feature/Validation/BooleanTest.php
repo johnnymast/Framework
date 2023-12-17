@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Tests\Feature\Framework\Validation;
+namespace App\Framework\Tests\Feature\Framework\Validation;
 
 use App\Framework\Validation\Validator;
 

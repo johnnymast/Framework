@@ -1,8 +1,8 @@
 <?php
 
-namespace App\src\Framework\Csrf\Providers;
+namespace App\Framework\Csrf\Providers;
 
-use App\src\Framework\Provider;
+use App\Framework\Provider;
 
 class CsrfBladeSupportProvider extends Provider
 {

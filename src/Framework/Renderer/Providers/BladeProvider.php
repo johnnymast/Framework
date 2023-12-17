@@ -1,9 +1,9 @@
 <?php
 
-namespace App\src\Framework\Renderer\Providers;
+namespace App\Framework\Renderer\Providers;
 
-use App\src\Framework\Provider;
-use App\src\Framework\Renderer\Interfaces\RendererInterface;
+use App\Framework\Provider;
+use App\Framework\Renderer\Interfaces\RendererInterface;
 use eftec\bladeone\BladeOne;
 
 class BladeProvider extends Provider

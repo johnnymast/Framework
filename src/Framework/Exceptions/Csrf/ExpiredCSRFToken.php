@@ -1,6 +1,6 @@
 <?php
 
-namespace App\src\Framework\Exceptions\Csrf;
+namespace App\Framework\Exceptions\Csrf;
 
 class ExpiredCSRFToken extends \Exception
 {

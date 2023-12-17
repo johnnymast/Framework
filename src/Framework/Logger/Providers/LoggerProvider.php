@@ -1,8 +1,8 @@
 <?php
 
-namespace App\src\Framework\Logger\Providers;
+namespace App\Framework\Logger\Providers;
 
-use App\src\Framework\Provider;
+use App\Framework\Provider;
 
 
 class LoggerProvider extends Provider

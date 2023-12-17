@@ -1,8 +1,8 @@
 <?php
 
-namespace App\src\Framework\Session\Interfaces;
+namespace App\Framework\Session\Interfaces;
 
-use App\src\Framework\Session\Interfaces\SessionKeyValueInterface;
+use App\Framework\Session\Interfaces\SessionKeyValueInterface;
 
 interface SessionInterface extends SessionKeyValueInterface
 {

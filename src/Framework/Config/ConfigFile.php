@@ -1,6 +1,6 @@
 <?php
 
-namespace App\src\Framework\Config;
+namespace App\Framework\Config;
 
 class ConfigFile
 {

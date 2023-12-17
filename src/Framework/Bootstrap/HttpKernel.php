@@ -1,19 +1,19 @@
 <?php
 
-namespace App\src\Framework\Bootstrap;
+namespace App\Framework\Bootstrap;
 
 use App\Application;
-use App\src\Framework\Auth\Http\Middleware\AuthMiddleware;
-use App\src\Framework\Bootstrap\Kernel;
-use App\src\Framework\Bootstrap\Modules\CSRFModule;
-use App\src\Framework\Bootstrap\Modules\DatabaseModule;
-use App\src\Framework\Bootstrap\Modules\DotEnvModule;
-use App\src\Framework\Bootstrap\Modules\FacadeModule;
-use App\src\Framework\Bootstrap\Modules\HelpersModule;
-use App\src\Framework\Bootstrap\Modules\ModelRouteBinding;
-use App\src\Framework\Bootstrap\Modules\MonologModule;
-use App\src\Framework\Bootstrap\Modules\ProvidersModule;
-use App\src\Framework\Bootstrap\Modules\RendererModule;
+use App\Framework\Auth\Http\Middleware\AuthMiddleware;
+use App\Framework\Bootstrap\Kernel;
+use App\Framework\Bootstrap\Modules\CSRFModule;
+use App\Framework\Bootstrap\Modules\DatabaseModule;
+use App\Framework\Bootstrap\Modules\DotEnvModule;
+use App\Framework\Bootstrap\Modules\FacadeModule;
+use App\Framework\Bootstrap\Modules\HelpersModule;
+use App\Framework\Bootstrap\Modules\ModelRouteBinding;
+use App\Framework\Bootstrap\Modules\MonologModule;
+use App\Framework\Bootstrap\Modules\ProvidersModule;
+use App\Framework\Bootstrap\Modules\RendererModule;
 use App\Http\Middleware\GlobalRequestMiddleware;
 use App\Http\Middleware\HttpErrorMiddleware;
 

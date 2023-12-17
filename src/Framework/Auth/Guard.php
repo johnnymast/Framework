@@ -1,9 +1,9 @@
 <?php
 
-namespace App\src\Framework\Auth;
+namespace App\Framework\Auth;
 
-use App\src\Framework\Auth\Repository\UserRepository;
-use App\src\Framework\Session\Facade\Session;
+use App\Framework\Auth\Repository\UserRepository;
+use App\Framework\Session\Facade\Session;
 use Doctrine\ORM\EntityManager;
 use App\Model\User;
 
@@ -15,7 +15,7 @@ final class Guard
     /**
      * Reference to the User Repository.
      *
-     * @var \App\src\Framework\Auth\Repository\UserRepository
+     * @var \App\Framework\Auth\Repository\UserRepository
      */
     protected UserRepository $repository;
 

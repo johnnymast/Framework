@@ -1,4 +1,16 @@
 {
+  "name": "johnnymast/framework",
+  "description": "My personal framework",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "keywords": [
+  ],
+  "autoload": {
+    "psr-4": {
+      "App\\Framework\\": "src/framework/",
+      "App\\Framework\\Tests\\": "tests/"
+    }
+  },
   "require": {
     "slim/slim": "4.*",
     "slim/psr7": "^1.6",
@@ -16,5 +28,10 @@
     "phpstan/phpstan": "^1.10",
     "pestphp/pest": "^2.6",
     "symfony/var-dumper": "^6.3"
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
   }
 }

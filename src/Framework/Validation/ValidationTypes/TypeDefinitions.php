@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\src\Framework\Validation\ValidationTypes;
+namespace App\Framework\Validation\ValidationTypes;
 
-use App\src\Framework\Validation\Attributes\ValidationRule;
-use App\src\Framework\Validation\ValidationContext;
+use App\Framework\Validation\Attributes\ValidationRule;
+use App\Framework\Validation\ValidationContext;
 
 class TypeDefinitions
 {

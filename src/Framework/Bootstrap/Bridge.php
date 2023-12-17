@@ -1,6 +1,6 @@
 <?php
 
-namespace App\src\Framework\Bootstrap;
+namespace App\Framework\Bootstrap;
 
 use App\Application;
 use DI\Bridge\Slim\Bridge as SlimBridge;

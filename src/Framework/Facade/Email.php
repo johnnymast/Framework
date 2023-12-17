@@ -1,10 +1,10 @@
 <?php
 
-namespace App\src\Framework\Facade;
+namespace App\Framework\Facade;
 
-use App\src\Framework\Facade;
-use App\src\Framework\Mail\Mailable\Mailable;
-use App\src\Framework\Mail\Mailer\Mailer;
+use App\Framework\Facade;
+use App\Framework\Mail\Mailable\Mailable;
+use App\Framework\Mail\Mailer\Mailer;
 
 /**
  * @method static Mailer to(string $address = '', string $name = '')

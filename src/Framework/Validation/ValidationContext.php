@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\src\Framework\Validation;
+namespace App\Framework\Validation;
 
-use App\src\Framework\Validation\Validator;
+use App\Framework\Validation\Validator;
 
 class ValidationContext
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace App\src\Framework\Renderer\Providers;
+namespace App\Framework\Renderer\Providers;
 
 
-use App\src\Framework\Provider;
+use App\Framework\Provider;
 
 class RendererProvider extends Provider
 {
