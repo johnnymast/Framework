@@ -2,7 +2,7 @@
 
 namespace App\Framework\Bootstrap;
 
-use App\Application;
+use App\Framework\Application;
 use DI\Bridge\Slim\Bridge as SlimBridge;
 use DI\Bridge\Slim\CallableResolver;
 use DI\Bridge\Slim\ControllerInvoker;

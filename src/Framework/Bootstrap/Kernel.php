@@ -2,9 +2,8 @@
 
 namespace App\Framework\Bootstrap;
 
-use App\Application;
+use App\Framework\Application;
 
-use function App\Framework\Bootstrap\app;
 
 abstract class Kernel
 {

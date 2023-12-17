@@ -9,7 +9,10 @@
     "psr-4": {
       "App\\Framework\\": "src/framework/",
       "App\\Framework\\Tests\\": "tests/"
-    }
+    },
+    "files": [
+      "src/Framework/Helpers/Helpers.php"
+    ]
   },
   "require": {
     "slim/slim": "4.*",

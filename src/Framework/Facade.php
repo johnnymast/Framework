@@ -2,7 +2,7 @@
 
 namespace App\Framework;
 
-use App\Application;
+use App\Framework\Application;
 use App\Framework\Config\Config;
 
 abstract class Facade
@@ -16,7 +16,7 @@ abstract class Facade
     public static array $resolvedInstance = [];
 
     /**
-     * @var \App\Application|null
+     * @var \App\Framework\Application|null
      */
     public static ?Application $app = null;
 
@@ -65,7 +65,7 @@ abstract class Facade
     /**
      * Set the Main application.
      *
-     * @param \App\Application $app The Application instance.
+     * @param \App\Framework\Application $app The Application instance.
      *
      * @return void
      */

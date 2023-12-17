@@ -2,12 +2,14 @@
 
 namespace App\Framework;
 
-use App\{Application, src\Framework\Bootstrap\Kernel,};
+use App\Framework\Application;
+use App\Framework\Bootstrap\Kernel;
+
 
 class Provider
 {
     /**
-     * @param \App\Application                    $app    Reference to the Application instance.
+     * @param \App\Framework\Application                    $app    Reference to the Application instance.
      * @param \App\Framework\Bootstrap\Kernel $kernel Reference to the Kernel instance.
      */
     public function __construct(protected Application $app, protected Kernel $kernel)

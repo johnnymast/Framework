@@ -4,8 +4,6 @@ namespace App\Framework\Renderer;
 
 use Psr\Http\Message\ResponseInterface;
 
-use function App\Framework\Renderer\app;
-
 class View
 {
     /**

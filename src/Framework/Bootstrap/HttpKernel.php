@@ -2,14 +2,13 @@
 
 namespace App\Framework\Bootstrap;
 
-use App\Application;
+use App\Framework\Application;
 use App\Framework\Auth\Http\Middleware\AuthMiddleware;
 use App\Framework\Bootstrap\Kernel;
 use App\Framework\Bootstrap\Modules\CSRFModule;
 use App\Framework\Bootstrap\Modules\DatabaseModule;
 use App\Framework\Bootstrap\Modules\DotEnvModule;
 use App\Framework\Bootstrap\Modules\FacadeModule;
-use App\Framework\Bootstrap\Modules\HelpersModule;
 use App\Framework\Bootstrap\Modules\ModelRouteBinding;
 use App\Framework\Bootstrap\Modules\MonologModule;
 use App\Framework\Bootstrap\Modules\ProvidersModule;
@@ -17,7 +16,6 @@ use App\Framework\Bootstrap\Modules\RendererModule;
 use App\Http\Middleware\GlobalRequestMiddleware;
 use App\Http\Middleware\HttpErrorMiddleware;
 
-use function App\Framework\Bootstrap\app;
 
 class HttpKernel extends Kernel
 {
@@ -30,7 +28,6 @@ class HttpKernel extends Kernel
      */
     protected array $defaults = [
         'modules' => [
-            HelpersModule::class,
             DotEnvModule::class,
             FacadeModule::class,
             MonologModule::class,
