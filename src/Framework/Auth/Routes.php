@@ -1,7 +1,8 @@
 <?php
 
 use App\Framework\Auth\Http\Controllers\LoginController;
-use App\Framework\Auth\Http\Controllers\PasskeyController;
+use App\Framework\Auth\Http\Controllers\LoginPasskeyController;
+use App\Framework\Auth\Http\Controllers\RegisterPasskeyController;
 use App\Framework\Auth\Http\Controllers\RegisterController;
 use App\Framework\Auth\Http\Controllers\ResetPasswordController;
 use App\Framework\Auth\Http\Controllers\VerificationController;
@@ -48,11 +49,28 @@ app()->group('', function (RouteCollectorProxy $group) {
     );
 })->add(CSRFMiddleware::class);
 
-app()->group('passkey', function (RouteCollectorProxy $group) {
-    $group->get('/registerRequest', callable: [PasskeyController::class, 'showLinkRequestForm'])->setName(
+app()->group('', function (RouteCollectorProxy $group) {
+    $group->get('/passkey/register', callable: [RegisterPasskeyController::class, 'precentLinkRequestData'])->setName(
         'auth.passkey.request'
     );
-})->add(CSRFMiddleware::class)->add(AuthRequiredMiddleware::class);
 
+    $group->post('/passkey/verify', callable: [RegisterPasskeyController::class, 'verifyLinkRequestData'])->setName(
+        'auth.passkey.verify'
+    );
+
+
+})->add(AuthRequiredMiddleware::class);
+
+
+app()->post('/passkey/find', callable: [LoginPasskeyController::class, 'findLinkData'])->setName(
+    'auth.passkey.find'
+);
+
+app()->post('/passkey/login', callable: [LoginPasskeyController::class, 'login'])->setName(
+    'auth.passkey.login'
+);
+
+
+//->add(CSRFMiddleware::class)
 
 app()->post('/logout', callable: [LoginController::class, 'logout'])->setName('auth.logout');

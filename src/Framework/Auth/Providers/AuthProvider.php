@@ -56,8 +56,14 @@ class AuthProvider extends Provider
                 return Session::has('user');
             });
 
+
             $blade->if('guest', function () {
                 return !Session::has('user');
+            });
+
+            $blade->if('passkey', function () {
+                $passkey = config('auth.passkeys');
+                return $passkey['enabled'];
             });
         }
     }

@@ -1,7 +1,7 @@
 {
   "name": "johnnymast/framework",
   "description": "My personal framework",
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "type": "project",
   "license": "MIT",
   "keywords": [
@@ -25,7 +25,8 @@
     "symfony/console": "^6.2",
     "phpmailer/phpmailer": "^6.8",
     "twig/twig": "^3.0",
-    "monolog/monolog": "^3.5"
+    "monolog/monolog": "^3.5",
+    "firehed/webauthn": "dev-main"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.7",

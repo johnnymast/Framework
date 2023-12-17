@@ -5,11 +5,13 @@ namespace App\Framework\Bootstrap\Modules;
 use App\Framework\Application;
 use App\Framework\Bootstrap\Interfaces\ModuleInterface;
 use App\Framework\Bootstrap\Kernel;
-use App\Framework\Csrf\CsrfProtection;
+use Firehed\WebAuthn\ChallengeManagerInterface;
+use Firehed\WebAuthn\RelyingPartyInterface;
+use Firehed\WebAuthn\SessionChallengeManager;
+use Firehed\WebAuthn\SingleOriginRelyingParty;
 
-class CSRFModule implements ModuleInterface
+class PasskeyModule implements ModuleInterface
 {
-
     /**
      * Run the module.
      *
@@ -20,6 +22,8 @@ class CSRFModule implements ModuleInterface
      */
     public static function run(Application $app, Kernel $kernel): void
     {
-        $app->bind('csrf', new CsrfProtection());
+        $settings = config('auth.passkeys');
+        $app->bind(RelyingPartyInterface::class, new SingleOriginRelyingParty($settings['host']));
+        $app->bind(ChallengeManagerInterface::class, new SessionChallengeManager);
     }
 }

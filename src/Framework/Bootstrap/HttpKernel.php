@@ -10,6 +10,7 @@ use App\Framework\Bootstrap\Modules\DotEnvModule;
 use App\Framework\Bootstrap\Modules\FacadeModule;
 use App\Framework\Bootstrap\Modules\ModelRouteBinding;
 use App\Framework\Bootstrap\Modules\MonologModule;
+use App\Framework\Bootstrap\Modules\PasskeyModule;
 use App\Framework\Bootstrap\Modules\ProvidersModule;
 use App\Framework\Bootstrap\Modules\RendererModule;
 use App\Framework\Global\Http\Middleware\GlobalRequestMiddleware;
@@ -29,6 +30,7 @@ class HttpKernel extends Kernel
         'modules' => [
             DotEnvModule::class,
             FacadeModule::class,
+            PasskeyModule::class,
             MonologModule::class,
             RendererModule::class,
             DatabaseModule::class,

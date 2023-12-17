@@ -16,6 +16,7 @@ final class UserFactory
      * @param string $email    The Email for the user.
      * @param string $password The password for the user.
      *
+     * @throws \PHPMailer\PHPMailer\Exception
      * @throws \Psr\Container\ContainerExceptionInterface
      * @throws \Psr\Container\NotFoundExceptionInterface
      * @return \App\Model\User
@@ -27,7 +28,7 @@ final class UserFactory
         $em = app()->resolve(EntityManager::class);
 
         /**
-         * @var \App\Model\User
+         * @var \App\Model\User $user
          */
         $user = new $settings['entity'];
         $user->setName($name);
