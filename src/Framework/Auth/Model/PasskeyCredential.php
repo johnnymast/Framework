@@ -21,10 +21,10 @@ class PasskeyCredential
     #[JoinColumn(name: 'user_id', referencedColumnName: 'id')]
     private User|null $user = null;
 
-    #[Column(type: 'text', unique: true, nullable: false)]
+    #[Column(type: 'string', length: 128, unique: true, nullable: false)]
     private string $storage_id;
 
-    #[Column(type: 'text', unique: false, nullable: false)]
+    #[Column(type: 'string',  length: 128, unique: false, nullable: false)]
     private string $credential;
 
     public function getId(): int

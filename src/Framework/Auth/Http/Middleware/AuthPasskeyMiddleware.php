@@ -28,7 +28,7 @@ class AuthPasskeyMiddleware implements MiddlewareInterface
 
         if ($settings['enabled']) {
             $response = $response->withHeader(
-                'Permissions-Policy', 'publickey-credentials-get=(self), publickey-credentials-create=(self)'
+                'Permissions-Policy', 'publickey-credentials-get=(self)'
             );
         }
 

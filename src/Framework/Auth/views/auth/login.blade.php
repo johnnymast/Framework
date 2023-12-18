@@ -136,7 +136,12 @@
         // TODO: On Error
         //
         // Format for WebAuthn API
-        const getOptions = {
+
+        // Similar to registration step 2
+
+        // Call the WebAuthn browser API and get the response. This may throw, which you
+        // should handle. Example: user cancels or never interacts with the device.
+        const credential = await navigator.credentials.get({
           publicKey: {
             challenge: Uint8Array.from(atob(data.challengeB64), c => c.charCodeAt(0)),
             allowCredentials: data.credential_ids.map(id => ({
@@ -144,13 +149,7 @@
               type: 'public-key',
             }))
           },
-        }
-
-        // Similar to registration step 2
-
-        // Call the WebAuthn browser API and get the response. This may throw, which you
-        // should handle. Example: user cancels or never interacts with the device.
-        const credential = await navigator.credentials.get(getOptions)
+        })
 
         // Format the credential to send to the server. This must match the format
         // handed by the ResponseParser class. The formatting code below can be used

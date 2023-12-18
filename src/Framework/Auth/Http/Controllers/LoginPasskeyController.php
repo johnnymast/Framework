@@ -102,7 +102,7 @@ class LoginPasskeyController extends Controller
                 $user = $repository->findOneBy(['email' => $data['email'] ?? '']);
 
                 if (!$user) {
-                    throw new \Exception("User not found1");
+                    throw new \Exception("User not found");
                 }
 
                 $repository = app()->resolve(EntityManager::class)->getRepository(PasskeyCredential::class);
