@@ -4,6 +4,7 @@ namespace App\Framework\Bootstrap;
 
 use App\Framework\Application;
 use App\Framework\Auth\Http\Middleware\AuthMiddleware;
+use App\Framework\Auth\Http\Middleware\AuthPasskeyMiddleware;
 use App\Framework\Bootstrap\Modules\CSRFModule;
 use App\Framework\Bootstrap\Modules\DatabaseModule;
 use App\Framework\Bootstrap\Modules\DotEnvModule;
@@ -13,6 +14,7 @@ use App\Framework\Bootstrap\Modules\MonologModule;
 use App\Framework\Bootstrap\Modules\PasskeyModule;
 use App\Framework\Bootstrap\Modules\ProvidersModule;
 use App\Framework\Bootstrap\Modules\RendererModule;
+use App\Framework\Bootstrap\Modules\SessionModule;
 use App\Framework\Global\Http\Middleware\GlobalRequestMiddleware;
 use App\Framework\Global\Http\Middleware\HttpErrorMiddleware;
 
@@ -30,6 +32,7 @@ class HttpKernel extends Kernel
         'modules' => [
             DotEnvModule::class,
             FacadeModule::class,
+            SessionModule::class,
             PasskeyModule::class,
             MonologModule::class,
             RendererModule::class,
@@ -41,6 +44,7 @@ class HttpKernel extends Kernel
         'middleware' => [
             AuthMiddleware::class,
             GlobalRequestMiddleware::class,
+            AuthPasskeyMiddleware::class,
         ],
         'error_middleware' => [
             HttpErrorMiddleware::class,

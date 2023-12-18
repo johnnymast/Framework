@@ -134,7 +134,7 @@
         const data = await response.json()
 
         // TODO: On Error
-
+        //
         // Format for WebAuthn API
         const getOptions = {
           publicKey: {
