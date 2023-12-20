@@ -79,3 +79,6 @@ class ConsoleKernel extends Kernel
         $this->commands = array_merge($this->commands, $this->defaults['commands']);
     }
 }
+
+
+//
