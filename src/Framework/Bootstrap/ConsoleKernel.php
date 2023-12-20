@@ -2,7 +2,6 @@
 
 namespace App\Framework\Bootstrap;
 
-use App\Framework\Bootstrap\Kernel;
 use App\Framework\Bootstrap\Modules\ConsoleModule;
 use App\Framework\Bootstrap\Modules\DatabaseModule;
 use App\Framework\Bootstrap\Modules\DotEnvModule;
