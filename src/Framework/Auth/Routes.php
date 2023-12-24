@@ -2,6 +2,7 @@
 
 use App\Framework\Auth\Http\Controllers\LoginController;
 use App\Framework\Auth\Http\Controllers\LoginPasskeyController;
+use App\Framework\Auth\Http\Controllers\OAuthController;
 use App\Framework\Auth\Http\Controllers\RegisterPasskeyController;
 use App\Framework\Auth\Http\Controllers\RegisterController;
 use App\Framework\Auth\Http\Controllers\ResetPasswordController;
@@ -68,6 +69,19 @@ app()->post('/passkey/find', callable: [LoginPasskeyController::class, 'findLink
 
 app()->post('/passkey/login', callable: [LoginPasskeyController::class, 'login'])->setName(
     'auth.passkey.login'
+);
+
+
+app()->get('/auth/oauth/{service}/login', [OAuthController::class, "login"])->setName(
+    'auth.oauth.login'
+);
+
+app()->get('/auth/oauth/{service}/register', [OAuthController::class, "register"])->setName(
+    'auth.oauth.register'
+);
+
+app()->get('/auth/oauth/{service}/redirect', [OAuthController::class, "redirect"])->setName(
+    'auth.oauth.redirect'
 );
 
 

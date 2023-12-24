@@ -65,6 +65,27 @@ class AuthProvider extends Provider
                 $passkey = config('auth.passkeys');
                 return $passkey['enabled'];
             });
+
+            $blade->if('oauth', function () {
+                $oath = config('auth.oauth');
+                return $oath['enabled'];
+            });
+
+            $blade->if('oauth_google', function () {
+                $oauth = config('auth.oauth');
+                return $oauth['google']['enabled'];
+            });
+
+            $blade->if('oauth_discord', function () {
+                $oauth = config('auth.oauth');
+                return $oauth['discord']['enabled'];
+            });
+
+            $blade->if('oauth_github', function () {
+                $oauth = config('auth.oauth');
+                return $oauth['github']['enabled'];
+            });
+
         }
     }
 
