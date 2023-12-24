@@ -15,13 +15,14 @@ final class UserFactory
      * @param string $name     The Name of the user.
      * @param string $email    The Email for the user.
      * @param string $password The password for the user.
+     * @param bool   $no_confirmation Extra parameter to disable confirmation (used with oauth).
      *
      * @throws \PHPMailer\PHPMailer\Exception
      * @throws \Psr\Container\ContainerExceptionInterface
      * @throws \Psr\Container\NotFoundExceptionInterface
      * @return \App\Model\User
      */
-    public static function create(string $name = '', string $email = '', string $password = ''): User
+    public static function create(string $name = '', string $email = '', string $password = '', bool $no_confirmation = false): User
     {
         $settings = config('auth.user');
 
@@ -35,7 +36,7 @@ final class UserFactory
         $user->setEmail($email);
         $user->setPassword($password);
 
-        if ($settings['require_confirmation']) {
+        if ($settings['require_confirmation'] && $no_confirmation === false) {
             $user->setActivated(false);
             $user->setVerificationToken(self::createVerificationToken());
 

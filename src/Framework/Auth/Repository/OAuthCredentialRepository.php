@@ -4,11 +4,8 @@ namespace App\Framework\Auth\Repository;
 
 use Doctrine\ORM\EntityRepository;
 
-/**
- * @method findOneByEmail(string $email)
- */
-final class UserRepository extends EntityRepository
+
+final class OAuthCredentialRepository extends EntityRepository
 {
     // Silence is golden
-
 }

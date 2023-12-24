@@ -50,7 +50,7 @@ class AuthRequiredMiddleware implements MiddlewareInterface
                 $response = $response
                     ->withStatus(302)
                     ->withBody($request->getBody())
-                    ->withHeader('Location', app()->getRouteCollector()->getRouteParser()->urlFor('auth.activate'));
+                    ->withHeader('Location', app()->getRouteCollector()->getRouteParser()->urlFor('auth.verification'));
 
             } else {
                 $response = $handler->handle($request);
