@@ -46,12 +46,12 @@ class ConsoleKernel extends Kernel
     protected array $defaults = [
         'modules' => [
             DotEnvModule::class,
+            DatabaseModule::class,
             FacadeModule::class,
             MonologModule::class,
             ConsoleModule::class,
             SymfonyCommandModule::class,
             RendererModule::class,
-            DatabaseModule::class,
             ProvidersModule::class,
         ],
         'commands' => [
