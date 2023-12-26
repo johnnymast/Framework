@@ -170,7 +170,7 @@
         <p class="mt-6 text-sm text-center text-gray-400">
             <a
                     href="{{ route('auth.password.request') }}"
-                    class="text-blue-500 focus:outline-none focus:underline hover:underline">{{ __('Forgotten password?') }}</a>.
+                    class="text-blue-500 focus:outline-none focus:underline hover:underline">{{ __('Forgotten your password?') }}</a>
         </p>
     </div>
 
