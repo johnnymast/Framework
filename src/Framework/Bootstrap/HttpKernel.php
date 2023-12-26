@@ -31,12 +31,12 @@ class HttpKernel extends Kernel
     protected array $defaults = [
         'modules' => [
             DotEnvModule::class,
+            DatabaseModule::class,
             FacadeModule::class,
             SessionModule::class,
             PasskeyModule::class,
             MonologModule::class,
             RendererModule::class,
-            DatabaseModule::class,
             ModelRouteBinding::class,
             ProvidersModule::class,
             CSRFModule::class,
