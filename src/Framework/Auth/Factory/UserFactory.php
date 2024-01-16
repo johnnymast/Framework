@@ -4,6 +4,7 @@ namespace App\Framework\Auth\Factory;
 
 use App\Framework\Auth\Mail\EmailVerification;
 use App\Framework\Facade\Email;
+use App\Model\Ascii;
 use App\Model\User;
 use Doctrine\ORM\EntityManager;
 
@@ -12,9 +13,9 @@ final class UserFactory
     /**
      * Create a new user.
      *
-     * @param string $name     The Name of the user.
-     * @param string $email    The Email for the user.
-     * @param string $password The password for the user.
+     * @param string $name            The Name of the user.
+     * @param string $email           The Email for the user.
+     * @param string $password        The password for the user.
      * @param bool   $no_confirmation Extra parameter to disable confirmation (used with oauth).
      *
      * @throws \PHPMailer\PHPMailer\Exception
@@ -22,8 +23,12 @@ final class UserFactory
      * @throws \Psr\Container\NotFoundExceptionInterface
      * @return \App\Model\User
      */
-    public static function create(string $name = '', string $email = '', string $password = '', bool $no_confirmation = false): User
-    {
+    public static function create(
+        string $name = '',
+        string $email = '',
+        string $password = '',
+        bool $no_confirmation = false
+    ): User {
         $settings = config('auth.user');
 
         $em = app()->resolve(EntityManager::class);
@@ -54,6 +59,42 @@ final class UserFactory
     }
 
     /**
+     * Destroy a user and all related entities.
+     *
+     * @param User $user The user to destroy.
+     *
+     * @throws \Psr\Container\ContainerExceptionInterface If there is an error resolving the entity manager from the container.
+     * @throws \Psr\Container\NotFoundExceptionInterface If the entity manager is not found in the container.
+     */
+    public static function destroy(User $user): void
+    {
+
+        $em = app()->resolve(EntityManager::class);
+        $repository = $em->getRepository(Ascii::class);
+
+        $categories = $user->getCategories();
+        $tags = $user->getTags();
+        $art = $user->getArt();
+
+        foreach($categories as $cat) {
+            $repository->deleteLinkedCategoriesWithId($cat->getId());
+            $em->remove($cat);
+        }
+
+        foreach($tags as $tag) {
+            $repository->deleteLinkedTagsWithId($tag->getId());
+            $em->remove($tag);
+        }
+
+        foreach($art as $ascii) {
+            $em->remove($ascii);
+        }
+
+        $em->remove($user);
+        $em->flush();
+    }
+
+    /**
      * Create an activation token.
      *
      * @throws \Psr\Container\ContainerExceptionInterface
@@ -66,7 +107,7 @@ final class UserFactory
 
         $tokenGeneric = $settings['secret_key'];
 
-        $data = time() ;
+        $data = time();
         $token = hash('sha256', $tokenGeneric . $data);
 
         if ($repository->findOneBy(['verification_token' => $token])) {
@@ -77,10 +118,12 @@ final class UserFactory
     }
 
     /**
-     * Create an password reset token.
+     * Create a password reset token.
      *
      * @throws \Psr\Container\ContainerExceptionInterface
      * @throws \Psr\Container\NotFoundExceptionInterface
+     *
+     * @return string The generated password reset token.
      */
     public static function createPasswordToken(): string
     {
@@ -89,7 +132,7 @@ final class UserFactory
 
         $tokenGeneric = $settings['secret_key'];
 
-        $data = time() ;
+        $data = time();
         $token = hash('sha256', $tokenGeneric . $data);
 
         if ($repository->findOneBy(['password_token' => $token])) {
