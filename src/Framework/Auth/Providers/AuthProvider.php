@@ -57,6 +57,14 @@ class AuthProvider extends Provider
             });
 
 
+            $blade->if('admin', function () {
+                if (Session::has('user')) {
+                    return Session::get('user')->isAdmin();
+                }
+                return false;
+            });
+
+
             $blade->if('guest', function () {
                 return !Session::has('user');
             });
