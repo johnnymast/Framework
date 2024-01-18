@@ -3,9 +3,11 @@
 use App\Framework\Facade\Config;
 
 /**
- * @param string $key
+ * Retrieves the value associated with the given key from the configuration.
  *
- * @return mixed
+ * @param string $key The key to retrieve the configuration value for.
+ *
+ * @return mixed The value associated with the given key in the configuration.
  */
 function config(string $key): mixed
 {
@@ -13,9 +15,11 @@ function config(string $key): mixed
 }
 
 /**
- * @param string $path
+ * Returns the complete URL for a given path or the base URL if no path is provided.
  *
- * @return string
+ * @param string $path (optional) The path to be appended to the base URL.
+ *
+ * @return string The complete URL.
  */
 function url(string $path = ''): string
 {
@@ -27,9 +31,11 @@ function url(string $path = ''): string
 }
 
 /**
- * @param string $path
+ * Get the full path of a file or directory within the project.
  *
- * @return string
+ * @param string $path (optional) The path of the file or directory. Defaults to an empty string.
+ *
+ * @return string The full path of the file or directory.
  */
 function project_path(string $path = ''): string
 {
@@ -38,9 +44,11 @@ function project_path(string $path = ''): string
 
 
 /**
- * @param string $path
+ * Returns the absolute path to the source directory or concatenates it with the provided path.
  *
- * @return string
+ * @param string $path (optional) The path to concatenate with the source directory. Default is an empty string.
+ *
+ * @return string The absolute path to the source directory or the concatenated path.
  */
 function source_path(string $path = ''): string
 {
@@ -53,9 +61,11 @@ function source_path(string $path = ''): string
 
 
 /**
- * @param string $file
+ * Returns the path to a route file or the base route directory if no file is specified.
  *
- * @return mixed
+ * @param string $file The name of the route file (optional).
+ *
+ * @return mixed The path to the specified route file or the base route directory.
  */
 function route_path(string $file): mixed
 {
@@ -67,9 +77,15 @@ function route_path(string $file): mixed
 }
 
 /**
- * @param string $path
+ * Returns the absolute path to a configuration file or directory.
  *
- * @return string
+ * If a relative path is provided, it will be appended to the default configuration path.
+ * If an empty string is provided, the default configuration path will be returned.
+ * The returned path will be an absolute path.
+ *
+ * @param string $path The relative path to the configuration file or directory.
+ *
+ * @return string The absolute path to the configuration file or directory.
  */
 function config_path(string $path = ''): string
 {
@@ -77,9 +93,13 @@ function config_path(string $path = ''): string
 }
 
 /**
- * @param string $path
+ * Returns the full path of a view file.
+ * If the optional $path parameter is empty, the method will return the real path of the "resources/views" directory.
+ * If the $path parameter is provided, the method will append it to the real path of the "resources/views" directory.
  *
- * @return string
+ * @param string $path (optional) The path to append to the directory path. Default is an empty string.
+ *
+ * @return string The full path of the view file or directory.
  */
 function view_path(string $path = ''): string
 {
@@ -91,9 +111,11 @@ function view_path(string $path = ''): string
 }
 
 /**
- * @param string $path
+ * Returns the absolute path to the HTTP directory.
  *
- * @return string
+ * @param string $path Optional. The specific path to append to the HTTP directory. Defaults to an empty string.
+ *
+ * @return string The absolute path to the HTTP directory.
  */
 function http_path(string $path = ''): string
 {
@@ -105,9 +127,11 @@ function http_path(string $path = ''): string
 }
 
 /**
- * @param string $path
+ * Returns the absolute path to the cache directory or a file within it.
  *
- * @return string
+ * @param string $path (optional) The path to a file within the cache directory. Defaults to an empty string.
+ *
+ * @return string The absolute path to the cache directory or the absolute path to the specified file within the cache directory.
  */
 function cache_path(string $path = ''): string
 {
@@ -115,9 +139,11 @@ function cache_path(string $path = ''): string
 }
 
 /**
- * @param string $path
+ * Generate the log file path.
  *
- * @return string
+ * @param string $path (optional) The path to append to the log directory.
+ *
+ * @return string The absolute path to the log file.
  */
 function log_path(string $path = ''): string
 {
