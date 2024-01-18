@@ -2,7 +2,9 @@
 
 use App\Framework\Renderer\Interfaces\RendererInterface;
 use App\Framework\Renderer\View;
+use App\Framework\Router\Interfaces\CurrentRouteInterface;
 use Psr\Http\Message\ResponseInterface;
+use Slim\Routing\RouteContext;
 
 if (!function_exists('__')) {
     /**
@@ -102,4 +104,31 @@ function old(string $string, string $default = ''): string
 function route(string $route, array $data = []): string
 {
     return app()->getRouteCollector()->getRouteParser()->urlFor($route, $data);
+}
+
+/**
+ * Check if the current route is active.
+ *
+ * Note: This needs $app->addRoutingMiddleware(); just before $app->run()
+ * in index.php.
+ *
+ *
+ * @param mixed $data The route(s) to check.
+ *
+ * @return bool True if the current route is active, false otherwise.
+ */
+function is_active_route(mixed $data): bool
+{
+    $route = app()->resolve(CurrentRouteInterface::class);
+
+    if (!is_array($data)) {
+        $data = [$data];
+    }
+
+    foreach ($data as $name) {
+        if ($route->getName() === $name) {
+            return true;
+        }
+    }
+    return false;
 }

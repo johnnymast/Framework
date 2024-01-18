@@ -30,7 +30,7 @@ class OAuthCredential
     #[Column(type: 'string',  length: 128, unique: false, nullable: false)]
     private string $service;
 
-    #[Column(type: 'text',  unique: true, nullable: false)]
+    #[Column(type: 'text', length: 65535,  unique: false, nullable: false)]
     private string $oauth_token;
 
     #[Column(name: 'expires', nullable: true)]
@@ -59,71 +59,155 @@ class OAuthCredential
         $this->setUpdatedAt(new \DateTime());
     }
 
+    /**
+     * Sets the ID of the object.
+     *
+     * @param int $id The ID value to be set.
+     *
+     * @return void
+     */
     public function setId(int $id): void
     {
         $this->id = $id;
     }
 
+    /**
+     * Set the user.
+     *
+     * @param User|null $user The user object. Pass null to remove the user.
+     *
+     * @return void
+     */
     public function setUser(?User $user): void
     {
         $this->user = $user;
     }
 
+    /**
+     * Sets the service for the object.
+     *
+     * @param string $service The service to be set.
+     *
+     * @return void
+     */
     public function setService(string $service): void
     {
         $this->service = $service;
     }
 
+    /**
+     * Sets the OAuth token.
+     *
+     * @param string $oauth_token The OAuth token.
+     *
+     * @return void
+     */
     public function setOauthToken(string $oauth_token): void
     {
         $this->oauth_token = $oauth_token;
     }
 
+    /**
+     * Sets the "expires" property of the object.
+     *
+     * @param \DateTime $expires The expiration date and time
+     *
+     * @return void
+     */
     public function setExpires(\DateTime $expires): void
     {
         $this->expires = $expires;
     }
 
+    /**
+     * Set the createdAt value.
+     *
+     * @param \DateTime $createdAt The value to set the createdAt property.
+     *
+     * @return void
+     */
     public function setCreatedAt(\DateTime $createdAt): void
     {
         $this->createdAt = $createdAt;
     }
 
+    /**
+     * Sets the updated timestamp for the object.
+     *
+     * @param \DateTime $updatedAt The timestamp to set as the updated time
+     *
+     * @return void
+     */
     public function setUpdatedAt(\DateTime $updatedAt): void
     {
         $this->updatedAt = $updatedAt;
     }
 
+    /**
+     * Gets the ID of the object.
+     *
+     * @return int The ID of the object.
+     */
     public function getId(): int
     {
         return $this->id;
     }
 
+    /**
+     * Get the user associated with this object.
+     *
+     * @return User|null The user object if associated, null otherwise.
+     */
     public function getUser(): ?User
     {
         return $this->user;
     }
 
+    /**
+     * Gets the service value.
+     *
+     * @return string The value of the service.
+     */
     public function getService(): string
     {
         return $this->service;
     }
 
+    /**
+     * Retrieves the OAuth token.
+     *
+     * @return string The OAuth token.
+     */
     public function getOauthToken(): string
     {
         return $this->oauth_token;
     }
 
+    /**
+     * Get the expiration date and time of an object.
+     *
+     * @return \DateTime The expiration date and time of an object.
+     */
     public function getExpires(): \DateTime
     {
         return $this->expires;
     }
 
+    /**
+     * Get the creation date and time of the object.
+     *
+     * @return \DateTime The creation date and time.
+     */
     public function getCreatedAt(): \DateTime
     {
         return $this->createdAt;
     }
 
+    /**
+     * Retrieves the last updated date and time of the object.
+     *
+     * @return \DateTime The last updated date and time.
+     */
     public function getUpdatedAt(): \DateTime
     {
         return $this->updatedAt;

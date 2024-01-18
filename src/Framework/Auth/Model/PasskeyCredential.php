@@ -24,7 +24,7 @@ class PasskeyCredential
     #[Column(type: 'string', length: 128, unique: true, nullable: false)]
     private string $storage_id;
 
-    #[Column(type: 'string',  length: 128, unique: false, nullable: false)]
+    #[Column(type: 'text',  length: 65535, unique: false, nullable: false)]
     private string $credential;
 
     public function getId(): int

@@ -99,6 +99,7 @@ class RegisterPasskeyController extends Controller
 
 
         } catch (\Exception $e) {
+            log_error($e->getMessage());
             $response = $response->withStatus(403);
             $response->getBody()->write('HTTP/1.1 403 Unauthorized');
         }

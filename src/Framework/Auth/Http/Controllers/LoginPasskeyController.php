@@ -176,7 +176,7 @@ class LoginPasskeyController extends Controller
             $credentialContainer = new CredentialContainer($credentials);
 
             if ($userHandle !== null && $userHandle !== Session::get('authenticating_user_id')) {
-                throw new \Exception('User handle does not match authentcating user');
+                throw new \Exception('User handle does not match authenticating user');
             }
 
             $updatedCredential = $getResponse->verify($challengeManager, $rp, $credentialContainer);
@@ -210,9 +210,10 @@ class LoginPasskeyController extends Controller
             log_debug("LOGIN OK");
         } catch (\Exception $e) {
             // Verification failed. Send an error to the user?
+            log_error("verifyLinkRequestData: " . $e->getMessage());
+
             $response = $response->withStatus(403);
             $response->getBody()->write('HTTP/1.1 403 Unauthorized');
-            log_error("verifyLinkRequestData: " . $e->getMessage());
         }
 
         return $response;

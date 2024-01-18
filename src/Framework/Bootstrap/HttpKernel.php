@@ -17,6 +17,7 @@ use App\Framework\Bootstrap\Modules\RendererModule;
 use App\Framework\Bootstrap\Modules\SessionModule;
 use App\Framework\Global\Http\Middleware\GlobalRequestMiddleware;
 use App\Framework\Global\Http\Middleware\HttpErrorMiddleware;
+use App\Framework\Router\Http\Middleware\CurrentRoute;
 
 
 class HttpKernel extends Kernel
@@ -45,6 +46,7 @@ class HttpKernel extends Kernel
             AuthMiddleware::class,
             GlobalRequestMiddleware::class,
             AuthPasskeyMiddleware::class,
+            CurrentRoute::class,
         ],
         'error_middleware' => [
             HttpErrorMiddleware::class,
