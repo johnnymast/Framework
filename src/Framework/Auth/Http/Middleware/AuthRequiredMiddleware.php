@@ -2,9 +2,11 @@
 
 namespace App\Framework\Auth\Http\Middleware;
 
+use App\Framework\Auth\Guard;
 use App\Framework\Session\Facade\Session;
 use App\Model\User;
 use Doctrine\ORM\EntityManager;
+use PHPUnit\Logging\Exception;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;
@@ -26,11 +28,21 @@ class AuthRequiredMiddleware implements MiddlewareInterface
      */
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
-        $flash = Session::getFlash();
+        try {
 
-        if (Session::has('user')) {
+            $repository = app()->resolve(EntityManager::class)->getRepository(User::class);
+
+            if (!Session::has('user')) {
+                throw new Exception("User not logged in.");
+            }
             $user = Session::get('user');
             $settings = config('auth.user');
+
+            if (!$repository->find($user->getId())) {
+
+                throw new Exception("User not found.");
+            }
+
 
             if ($settings['require_confirmation'] && !$user->isActivated()) {
                 /**
@@ -55,6 +67,32 @@ class AuthRequiredMiddleware implements MiddlewareInterface
             } else {
                 $response = $handler->handle($request);
             }
+
+
+
+        } catch (\Exception $e) {
+
+            /**
+             * Just to be sure the user is logged out.
+             *
+             * Note: added for the case that the admin deletes a user but the user is still in the session
+             * then we use logout to remove the user from the session as well.
+             */
+            (new Guard())
+                ->logout();
+
+            $response = app()
+                ->getResponseFactory()
+                ->createResponse();
+
+            $response = $response
+                ->withStatus(302)
+                ->withBody($request->getBody())
+                ->withHeader('Location', app()->getRouteCollector()->getRouteParser()->urlFor($this->redirectTo));
+
+        }
+        if (Session::has('user')) {
+
 
 
         } else {
